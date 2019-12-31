@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+//			1.质因数分解法
+			function gcd(a,b){
+				var result = 1;
+				for (var i = 1;i<=a&&i<=b;i++) {
+					if(a%i==0&&b%i==0){
+						result = i;
+					}
+				}
+				return result;
+			}
+//			alert(gcd(6,5))
+//			2.递归
+			function gcd2(a,b){
+				if(b == 0){
+					return a;
+				}
+				var r  = a%b
+				console.log(r)
+				return gcd2(b,r)
+			}
+//			alert(gcd2(12,24))
+//			3.迭代
+			function gcd3(a,b){
+				var temp;
+				while(b != 0){
+					temp = a%b;
+					a = b
+					b = temp
+				}
+				return a 
+			}
+//			alert(gcd3(5,6))
+			function csm(a,b){
+				return (a*b)/gcd3(a,b)
+			}
+//			alert(csm(5,6))
+
+
+		</script>
+	</body>
+</html>

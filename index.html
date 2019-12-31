@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = new Array(50,60,89,50,60,90,70,90,56,80);
+//			var arr1 = arr.sort(function(a,b){return a-b;});
+//			document.write("该数组最大值为",arr1[arr1.length-1],"该数组最小值为",arr[0])
+			console.log(arr)
+			//冒泡
+			function sort(arr){
+				// 外层for循环控制循环次数
+				for(var i=0;i<arr.length;i++){
+           		var tem = 0;
+	            // 内层for循环控制相邻的两个元素进行比较
+	            for(var j=i+1;j<arr.length;j++){
+	               if(arr[i]>arr[j]){
+	                   tem = arr[j];
+	                   arr[j]= arr[i];
+	                   arr[i] = tem;
+	               }
+	            }
+			}
+		}	
+//		   sort(arr)
+			console.log(arr)
+			
+//			数组反转
+			function reverse(Array){
+				for (var i = 0; i<=Array.length/2 ;i++) {
+					 var temp =  Array[i]
+					 Array[i] = Array[Array.length-1-i]
+					 Array[Array.length-1-i] = temp
+				}
+			}
+			reverse(arr)
+			console.log(arr)
+			
+		</script>
+	</body>
+</html>
